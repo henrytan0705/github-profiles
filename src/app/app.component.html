@@ -1,4 +1,5 @@
 <app-header></app-header>
-<app-search></app-search>
+<app-search (searchInput)="getResults($event)"></app-search>
+<app-info [searchInput]="input"></app-info>
 
 <router-outlet></router-outlet>

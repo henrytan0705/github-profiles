@@ -1,0 +1,14 @@
+<div *ngIf="searchInput">
+  <p>{{ searchInput }} received</p>
+  <div *ngIf="userFound; else notFound">
+    <img src="{{ profileImage }}" />
+    <p>Name: {{ name }}</p>
+    <p>Github Username: {{ userName }}</p>
+    <p>Followers Count: {{ followers }}</p>
+    <p>Repos Count: {{ reposCount }}</p>
+  </div>
+
+  <ng-template #notFound>
+    <h1>No Github Profile found with this username.</h1>
+  </ng-template>
+</div>

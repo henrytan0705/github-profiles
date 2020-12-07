@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { searchInputEventArgs } from './search/search.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'github-profiles';
+  input: string;
+
+  getResults(eventArgs: searchInputEventArgs) {
+    this.input = eventArgs.input;
+  }
 }
