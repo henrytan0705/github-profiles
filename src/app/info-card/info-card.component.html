@@ -1,0 +1,40 @@
+<div class="card text-white bg-dark mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="profile-pic col-md-4">
+      <img src="{{ profileImage }}" class="card-img" alt="..." />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <!-- <h5 class="card-title">{{ name }}</h5>
+        <p class="card-text">{{ bio }}</p> -->
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-white bg-dark">
+            <h5>
+              {{ name }}
+            </h5>
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            {{ bio }}
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            Username: {{ userName }}
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            Followers Count: {{ followers }}
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            Repos Count: {{ reposCount }}
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            <a href="{{ profileLink }}" target="_blank" class="card-link"
+              >Profile link</a
+            >
+          </li>
+          <li class="list-group-item text-white bg-dark">
+            <a href="{{ blog }}" target="_blank" class="card-link">Blog Link</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

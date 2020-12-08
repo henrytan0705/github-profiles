@@ -9,32 +9,42 @@ import axios from 'axios';
 export class InfoComponent implements OnInit {
   @Input() searchInput: string;
   userFound: boolean = true;
-  name: string;
-  userName: string;
-  followers: number;
-  reposCount: number;
-  profileImage;
+  data = {};
 
   constructor() {}
 
   showResults() {
-    axios.get(`https://api.github.com/users/${this.searchInput}`).then(res => {
-      console.log(res.data);
-      let {
-        name,
-        login,
-        avatar_url,
-        followers,
-        html,
-        url,
-        public_repos
-      } = res.data;
-      this.name = name;
-      this.userName = login;
-      this.followers = followers;
-      this.reposCount = public_repos;
-      this.profileImage = avatar_url;
-    });
+    axios
+      .get(`https://api.github.com/users/${this.searchInput}`)
+      .then(res => {
+        this.userFound = true;
+        console.log(res.data);
+        let {
+          name,
+          login,
+          avatar_url,
+          followers,
+          html_url,
+          public_repos,
+          bio,
+          blog
+        } = res.data;
+
+        this.data = {
+          name,
+          login,
+          avatar_url,
+          followers,
+          html_url,
+          public_repos,
+          bio,
+          blog
+        };
+      })
+      .catch(err => {
+        this.userFound = false;
+        console.log(err);
+      });
   }
 
   ngOnChanges(changes) {
@@ -44,4 +54,15 @@ export class InfoComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+}
+
+export interface userData {
+  name: string;
+  login: string;
+  followers: number;
+  public_repos: number;
+  avatar_url: string;
+  html_url: string;
+  bio: string;
+  blog: string;
 }

@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { InfoComponent } from './info/info.component';
+import { InfoCardComponent } from './info-card/info-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SearchComponent, InfoComponent],
+  declarations: [AppComponent, HeaderComponent, SearchComponent, InfoComponent, InfoCardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
