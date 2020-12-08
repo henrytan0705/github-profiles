@@ -17,10 +17,11 @@
 
 ### Languages and Technologies Used
 
-- Angular
 - TypeScript
+- Angular
 - Axios
 - Bootstrap
+- Firebase
 
 ### Data Source
 
