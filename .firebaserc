@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "github-profiles-a7571": {
+      "hosting": {
+        "github-profiles": [
+          "github-profiles-a7571"
+        ]
+      }
+    }
+  }
+}
