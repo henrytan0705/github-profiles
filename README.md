@@ -4,7 +4,7 @@
 
 ### GitHub Profile Fetching Application.
 
-#### User's Data Displayed
+#### User's Displayed Data
 
 - Profile Image
 - Name
