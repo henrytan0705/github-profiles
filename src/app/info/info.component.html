@@ -1,9 +1,13 @@
 <div *ngIf="searchInput" class="card-data">
-  <div *ngIf="userFound; else notFound">
+  <div *ngIf="userFound">
     <app-info-card [data]="data"></app-info-card>
   </div>
 
-  <ng-template #notFound>
+  <div *ngIf="loading" class="spinner-border" role="status">
+    <span class="visually-hidden"></span>
+  </div>
+
+  <div *ngIf="displayNotFound">
     <h1>No Github Profile found with this username.</h1>
-  </ng-template>
+  </div>
 </div>
